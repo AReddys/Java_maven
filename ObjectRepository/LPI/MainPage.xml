@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE doc [
+ 
+  <!ENTITY Browser_IE "ie" >
+  <!ENTITY Browser_Chrome "chrome" >
+  <!ENTITY Browser_Firefox "firefox" >
+  <!ENTITY Execution_WebDriver "webdriver" >
+  <!ENTITY Execution_CodedUI "codedui" >
+  <!ENTITY Execution_Xamarin "xamarin" >
+  <!ENTITY Execution_Appium "appium" >
+  <!ENTITY Application_ReturnValue "returnvalue" >
+]>
+
+<page name="MainPage">
+
+  <Element Name ="Textbox_UserName">
+    <ApplicationExecution Name ="&Execution_WebDriver;">
+      <Type Name="&Browser_IE;">
+        <Locator Name ="userName"/>
+      </Type>
+      <Type Name="&Browser_Chrome;">
+        <Locator Name ="userName"/>
+      </Type>
+      <Type Name="&Browser_Firefox;">
+        <Locator Name ="userName"/>
+      </Type>
+    </ApplicationExecution>
+    
+    <ApplicationExecution Name ="&Execution_CodedUI;">
+      <Type Name="&Browser_IE;">
+        <Locator Name ="userName" ControlDefinition="&Application_ReturnValue;">HtmlEdit</Locator>
+      </Type>
+    </ApplicationExecution>
+    
+     <ApplicationExecution Name ="&Execution_Xamarin;">
+      <Type Name="Google Nexus 6.0">
+        <Locator Name ="userName">HtmlEdit</Locator>
+      </Type>
+    </ApplicationExecution>
+  
+     <ApplicationExecution Name ="&Execution_Appium;">
+       <Type Name="&Browser_IE;">
+         <Locator Name ="userName">HtmlEdit</Locator>
+      </Type>
+    </ApplicationExecution>
+  
+  </Element>
+
+  <Element Name ="Textbox_Password">
+    <ApplicationExecution Name ="&Execution_WebDriver;">
+      <Type Name="&Browser_IE;">
+        <Locator Name ="password"/>
+      </Type>
+      <Type Name="&Browser_Firefox;">
+        <Locator Name ="password"/>
+      </Type>
+    </ApplicationExecution>
+    <ApplicationExecution Name ="&Execution_CodedUI;">
+      <Type Name="&Browser_IE;">
+        <Locator Name ="password">HtmlEdit</Locator>
+      </Type>
+    </ApplicationExecution>
+  </Element>
+
+  <Element Name ="Button_Login">
+    <ApplicationExecution Name ="&Execution_WebDriver;">
+      <Type Name="&Browser_IE;">
+        <Locator Name ="login"/>
+      </Type>
+      <Type Name="&Browser_Firefox;">
+        <Locator Name ="login"/>
+      </Type>
+    </ApplicationExecution>
+    <ApplicationExecution Name ="&Execution_CodedUI;">
+      <Type Name="&Browser_IE;">
+        <Locator Name ="login" DisplayText="Login">HtmlInputButton</Locator>
+      </Type>
+    </ApplicationExecution>
+  </Element>
+
+
+  <Element Name ="RadioButton_AcceptAgreement">
+    <ApplicationExecution Name ="&Execution_WebDriver;">
+      <Type Name="&Browser_IE;">
+        <Locator Name ="agreementjdk-8u101-oth-JPR"/>
+      </Type>
+    </ApplicationExecution>
+    <ApplicationExecution Name ="&Execution_CodedUI;">
+      <Type Name="&Browser_IE;">
+        <Locator Name ="agreementjdk-8u101-oth-JPR">HtmlRadioButton</Locator>
+      </Type>
+    </ApplicationExecution>
+  </Element>
+
+  <Element Name ="ProductDescriptionGrid_Table">
+    <ApplicationExecution Name ="&Execution_CodedUI;">
+      <Type Name="&Browser_IE;">
+        <Locator Class ="orcl6w3">HtmlDiv</Locator>
+        <Locator Class ="downloadBox">HtmlTable</Locator>        
+      </Type>
+    </ApplicationExecution>
+  </Element>
+  
+  
+</page>
+

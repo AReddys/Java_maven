@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE doc [
+
+  <!ENTITY Browser_IE "ie" >
+  <!ENTITY Browser_Chrome "chrome" >
+  <!ENTITY Browser_Firefox "firefox" >
+]>
+
+<page name="MainPage">
+
+
+  <Element Name ="Textbox_Password">
+    <Locator name ="password"/>
+  </Element>
+
+  <Element Name ="Textbox_UserName">
+    <Locator BrowserType="&Browser_IE;" name ="userName"/>
+  </Element>
+
+  <Element Name ="Button_SignIn">
+    <Locator BrowserType="&Browser_IE;" name ="login"/>
+  </Element>
+  
+  <Element Name ="Textbox_Password123">
+    <Locator BrowserType="&Browser_Firefox;" name ="password"/>
+    <Locator BrowserType="&Browser_IE;" name ="password"/>
+  </Element>
+
+
+
+</page>
+

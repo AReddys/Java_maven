@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE doc [
+ 
+  <!ENTITY Browser_IE "ie" >
+  <!ENTITY Browser_Chrome "chrome" >
+  <!ENTITY Browser_Firefox "firefox" >
+  <!ENTITY Application_ReturnValue "returnvalue" >
+]>
+
+<page name="MainPage">
+
+  <Element Name ="Textbox_UserName">
+      <BrowserType Name="&Browser_IE;">
+        <Locator  Name ="userName" ControlDefinition="&Application_ReturnValue;">HtmlEdit</Locator>
+      </BrowserType>
+  </Element>
+
+  <Element Name ="Textbox_Password">   
+      <BrowserType Name="&Browser_IE;">
+        <Locator Name ="password">HtmlEdit</Locator>
+      </BrowserType>
+  </Element>
+
+  <Element Name ="Button_Login">  
+      <BrowserType Name="&Browser_IE;">
+        <Locator Name ="login" DisplayText="Login">HtmlInputButton</Locator>
+      </BrowserType>
+  </Element>
+
+
+  <Element Name ="RadioButton_AcceptAgreement">
+      <BrowserType Name="&Browser_IE;">
+        <Locator Name ="agreementjdk-8u101-oth-JPR">HtmlRadioButton</Locator>
+      </BrowserType>
+  </Element>
+
+  <Element Name ="ProductDescriptionGrid_Table">
+      <BrowserType Name="&Browser_IE;">
+        <Locator Class ="orcl6w3">HtmlDiv</Locator>
+        <Locator Class ="downloadBox">HtmlTable</Locator>        
+      </BrowserType>
+  </Element>
+</page>
+
